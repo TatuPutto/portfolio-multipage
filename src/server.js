@@ -9,12 +9,12 @@ app.use(express.static(app.get('publicPath')));
 
 // server landing page
 app.get('/', function (req, res) {
-    res.sendFile(path.join(publicPath, 'home.html'));
+    res.sendFile(path.join(publicPath, './html', 'home.html'));
 });
 
 // server projects page
 app.get('/projects', function (req, res) {
-    res.sendFile(path.join(publicPath, 'projects.html'));
+    res.sendFile(path.join(publicPath, './html', 'projects.html'));
 });
 
 app.listen(port, function () {
